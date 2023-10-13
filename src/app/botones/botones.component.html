@@ -1,0 +1,42 @@
+<!-- eslint-disable @angular-eslint/template/elements-content -->
+<p></p>
+
+<div>
+  <button
+    [class]="{
+      'disabled':button_disabled,
+
+    }"
+    class="btn btn-danger"
+    (click)="cambiarColor('danger')"
+  >
+    Verde
+  </button>
+  <button
+    [class]="{
+      'disabled':button_disabled,
+
+    }"
+    class="btn btn-success mx-2"
+    (click)="cambiarColor('success')"
+  >
+    Rojo
+  </button>
+  <button
+    [class]="{
+      'disabled':button_disabled,
+
+    }"
+    class="btn btn-primary"
+    (click)="cambiarColor('primary')"
+  >
+    Azul
+  </button>
+</div>
+
+<p [class]="textColor">Texto que va a cambiar de color</p>
+<p>{{ textColor }}</p>
+
+<button class="btn btn-secondary" (click)="button_disabled = !button_disabled">
+  Activar / Desactivar
+</button>
